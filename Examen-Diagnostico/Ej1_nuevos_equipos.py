@@ -5,16 +5,17 @@ Descripción: Ejercicio del examen diagnóstico.
 """
 
 
-alumnos = {"Hector", "Alberto", "Addi", "Tania", "Patricia", "Rebeca", "Jamileth", "Bryan", "Rosalinda",
-           "Galilea", "Jennifer", "Juan"}
+alumnos = ["Hector", "Alberto", "Addi", "Tania", "Patricia", "Rebeca", "Jamileth", "Bryan", "Rosalinda",
+           "Galilea", "Jennifer", "Juan"]
 
 cantidad = len(alumnos)
 
-equipos_formados = [ ]
+equipos_formados = []
 
-for i in range(len(alumnos):
-    for j in range(i + 1, len(alumnos)):
-        equipos_formados.append((alumnos[i], alumnos[j]))
+for i in range(0,12,2):
+    if i +1 < len(alumnos):
+        equipos_formados.append((alumnos[i], alumnos[i+1]))
 
-
+for equipo in equipos_formados:
+    print(equipo)
 
