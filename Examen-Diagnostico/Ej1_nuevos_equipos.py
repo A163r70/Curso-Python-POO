@@ -15,12 +15,12 @@ def parejas_validas(parejas, equipos_antes):
             return True
     return False
 
-def formar_equipos():
+def formar_equipos(alumnos,equipos_anteriores):
     equipos_formados = []
-    random.shuffle(alumnos)
     equipos = []
 
     while len(equipos_formados) < 6:
+        random.shuffle(alumnos)
         for i in range(0,12,2):
             if i +1 < len(alumnos):
                 equipos = [(alumnos[i], alumnos[i+1])]
@@ -34,6 +34,9 @@ def formar_equipos():
         if equipo_valido == True:
             equipos_formados = equipos
 
+    for equipo in equipos_formados:
+        print(equipo)
+
 
 
 
@@ -43,4 +46,4 @@ if __name__ == '__main__':
 
     equipos_anteriores = [["Hector", "Alberto", "Addi"], ["Patricia", "Tania", "Rebeca"],
                           ["Juan", "Galilea", "Jennifer"], ["Jamileth", "Bryan", "Rosalinda"]]
-    formar_equipos()
+    formar_equipos(alumnos,equipos_anteriores)
