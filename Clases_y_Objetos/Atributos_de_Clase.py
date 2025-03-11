@@ -22,3 +22,4 @@ class Empleado:
 if __name__ == '__main__':
     empleado1 = Empleado("Addi", 150)
     empleado2 = Empleado("Héctor", 150)
+    print(empleado1)
