@@ -1,4 +1,8 @@
-
+'''
+Nombre: Jesús Alberto Ramírez Salinas
+Fecha: 10 de enero de 2025
+Descripción: Clases.
+'''
 class Estudiante:
     def __init__(self,nombre:str):
         self.nombre = nombre
@@ -21,7 +25,7 @@ class Profesor:
         print(f"{self.nombre} domina el tema {tema}")
 
     def ensenar_tema(self,no_tema: int)->str:
-        if no_tema > len(self.temas_dominados):
+        if no_tema < len(self.temas_dominados):
             return self.temas_dominados[no_tema]
         else:
             return "Fuera de rango."
@@ -36,5 +40,15 @@ if __name__ == '__main__':
     addi.aprender_tema("I o T")
     print(alberto)
     print(addi)
-    profesor = Profesor("Héctor", ["Programación", "Álgebra"])
-    print(profesor)
+    profesor = Profesor("Héctor", ["Programación", "Álgebra", "Diseño Web"])
+    tema = profesor.ensenar_tema(2)
+    print(tema)
+    #el profesor le enseña al alumno
+    #1ra forma
+    tema1 = profesor.ensenar_tema(1)
+    alberto.aprender_tema(tema1)
+    addi.aprender_tema(tema1)
+    #sgunda forma, enseñar el tema 2 al estudiante 2
+    addi.aprender_tema(profesor.ensenar_tema(2))
+    print(alberto)
+    print(addi)
