@@ -23,12 +23,10 @@ class Personaje:
                 self.x += 1
             elif i == "i" and self.x > 0:
                 self.x -= 1
-            else:
-                print("Error")
 
 
     def posicion_actual(self)->None:
-        pass
+        print(f"Posición actual: (x, y) = ({self.x}, {self.y})")
 
 
 
@@ -37,14 +35,10 @@ class Personaje:
         return f"Personaje(id: {self.id}, x: {self.x}, y: {self.y}"
 
 def solicitar_movimiento():
-    salir = True
-    print("Se solicita iterativamente las secuencias de movimiento.")
-    while salir:
-        movimientos = input("Ingresa las órdenes de movimiento o S para salir: ").lower()
-        if movimientos == "s":
-            break
-        else:
-            self.moverse(movimientos)
+    movimientos = input("Ingresa las órdenes de movimiento o S para salir: ").lower()
+    while not movimientos.isalpha():
+        movimientos = input("Intenta nuevamente: ").lower()
+    return movimientos
 
 
 
@@ -53,6 +47,13 @@ if __name__ == '__main__':
     personaje = Personaje()
     print(personaje)
 
-    movimiento = solicitar_movimiento()
-    while movimiento != "s":
-        pass
+    print("-- Se solicita iterativamente las secuencias de movimiento. --")
+    while True:
+        movimiento = solicitar_movimiento()
+        if movimiento != "s":
+            personaje.moverse(movimiento)
+            personaje.posicion_actual()
+        else:
+            personaje.posicion_actual()
+            break
+
