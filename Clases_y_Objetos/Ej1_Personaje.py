@@ -14,6 +14,11 @@ class Personaje:
         Personaje.contador_id += 1
 
     def moverse(self,ordenes:str)->None:
+        """
+        Función que mueve al personaj en el taler 10 x 10
+        :param ordenes:
+        :return:
+        """
         for i in ordenes:
             if i == "a" and self.y < 10:
                 self.y += 1
