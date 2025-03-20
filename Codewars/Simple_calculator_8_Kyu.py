@@ -13,12 +13,15 @@ if the variables are not numbers or the sign does not belong to the list above a
 must be returned.
 """
 def calculator(x, y, op):
+    x = float(x)
+    y = float(y)
+    resultado = 0
     if op == "+":
-        return x + y
+        return  x + y
     elif op == "-":
-        return x - y
+        return  x - y
     elif op == "*":
-        return x * y
+        return  x * y
     elif op == "/":
         return x / y
     else:
@@ -30,3 +33,4 @@ if __name__ == '__main__':
     print(calculator(5, 5, '*'))
     print(calculator(5, 4, '/'))
     print(calculator(6, 2, '&'))
+    print(calculator(6, "2", '&'))
