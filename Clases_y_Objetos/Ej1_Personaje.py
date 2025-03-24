@@ -35,7 +35,7 @@ class Personaje:
 
     def moverse(self,ordenes:str)->None:
         """
-        Función que mueve al personaj en el taler 10 x 10
+        Función que mueve al personaje en el tablero  de 10 x 10.
         :param ordenes:
         :return:
         """
@@ -52,7 +52,7 @@ class Personaje:
 
     def posicion_actual(self)->None:
         """
-        Función que muestra la posicón actual del personaje.
+        Función que muestra la posición actual del personaje.
         :return:
         """
         print()
@@ -64,7 +64,7 @@ class Personaje:
 
 def solicitar_movimiento():
     """
-    Función que pide al usuario los movimientos del perosonaje.
+    Función que pide al usuario los movimientos que hará el perosonaje.
     :return:
     """
     print("Avanzar (caracteres 'A' o 'a')")
