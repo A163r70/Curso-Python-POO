@@ -31,6 +31,10 @@ class Personaje:
 
 
     def posicion_actual(self)->None:
+        """
+        Función que muestra la posicón actual del personaje.
+        :return:
+        """
         print(f"Posición actual: (x, y) = ({self.x}, {self.y})")
 
 
@@ -40,6 +44,10 @@ class Personaje:
         return f"Personaje(id: {self.id}, x: {self.x}, y: {self.y}"
 
 def solicitar_movimiento():
+    """
+    Función que pide al usuario los movimientos del perosonaje.
+    :return:
+    """
     movimientos = input("Ingresa las órdenes de movimiento o S para salir: ").lower()
     while not movimientos.isalpha():
         movimientos = input("Intenta nuevamente: ").lower()
