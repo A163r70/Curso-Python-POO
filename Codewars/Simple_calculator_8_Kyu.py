@@ -13,16 +13,32 @@ if the variables are not numbers or the sign does not belong to the list above a
 must be returned.
 """
 def calculator(x, y, op):
+    x = cadena_a_flotante(str(x))
+    y = cadena_a_flotante(str(y))
+    while x is None or y is None:
+        return "unknown value"
     if op == "+":
-        return x + y
+        return  x + y
     elif op == "-":
-        return x - y
+        return  x - y
     elif op == "*":
-        return x * y
+        return  x * y
     elif op == "/":
+        if y == 0:
+            return "unknown value"
         return x / y
     else:
-        print("unknown value")
+        return "unknown value"
+
+
+def cadena_a_flotante(cadena: str) -> float | None:
+    if cadena.count(".") > 1 or cadena.count("-") > 1 or (cadena.startswith("-") and "-" in cadena[1:]):
+        return None
+
+    if cadena.replace(".", "", 1).replace("-", "", 1).isdigit():
+        return float(cadena)
+
+    return None
 
 if __name__ == '__main__':
     print(calculator(6, 2, '+'))
@@ -30,3 +46,4 @@ if __name__ == '__main__':
     print(calculator(5, 5, '*'))
     print(calculator(5, 4, '/'))
     print(calculator(6, 2, '&'))
+    print(calculator(6, "2", '&'))

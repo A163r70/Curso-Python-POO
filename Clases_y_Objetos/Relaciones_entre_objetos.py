@@ -39,10 +39,24 @@ class Empresa:
             self.empleados.append(empleado)
 
     def remover_empleados(self, *empleados_a_remover:Empleado)->None:
-        pass
+        """
+        Se utiliza para remover un empleado de la empresa.
+        :param empleados_a_remover: Empleado a remover de la empresa.
+        """
+        for empleado in empleados_a_remover:
+            if empleado in self.empleados:
+                self.empleados.remove(empleado)
+
+            else:
+                print(f"El empleado {empleado} no forma parte de {self.nombre}.")
 
     def aumentar_sueldo_empleados(self, porcentaje:int)->None:
-        pass
+        """
+        Se utiliza para aumentar el sueldo a todos los empleados de acuerdo con un porcentaje.
+        :param porcentaje: Porcentaje a incrementar el sueldo.
+        """
+        for empleado in self.empleados:
+            empleado.aumentar_sueldo(porcentaje=porcentaje)
 
     def mostrar_empleados(self)->None:
         """
@@ -74,3 +88,8 @@ if __name__ == '__main__':
     unsij.agregar_empleados(empleado1, empleado2)
     unsij.mostrar_empleados()
     print(unsij)
+    print(empleado1)
+    empleado1.nombre = "Jesus Alberto"
+    print(empleado1)
+    #get(nombre) para leer el nombre
+    #set(nombre) para cambiarlo
