@@ -5,7 +5,7 @@ Descripción:
 """
 
 class ScoreBoard:
-    def __init__(self, points:int=0, text_color:tuple[int]=(0,0,0), font:str="Kimono", size:float=48):
+    def __init__(self, points:int=0, text_color:tuple[int,int,int]=(0,0,0), font:str="Kimono", size:float=48):
         self._points = points
         self._text_color = text_color
         self._font = font
@@ -43,6 +43,9 @@ class ScoreBoard:
 
     def draw(self)->None:
         pass
+
+    def __str__(self):
+        return f"ScoreBoard (Points ={self._points},Text_color={self._text_color},Font={self.font},Size={self.size})"
 
 if __name__ == '__main__':
     """ %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
