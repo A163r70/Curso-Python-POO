@@ -42,7 +42,7 @@ class ScoreBoard:
         self._size = tamano
 
     def draw(self)->None:
-        pass
+        print(f"Score = {self.points}")
 
     def __str__(self):
         return f"ScoreBoard (Points ={self._points},Text_color={self._text_color},Font={self.font},Size={self.size})"

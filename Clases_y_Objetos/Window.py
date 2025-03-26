@@ -41,9 +41,14 @@ class Window:
     def scoreboard(self, scoreboard:ScoreBoard):
         self._scoreboard = scoreboard
 
+    def draw_scoreboard(self)->None:
+        self._scoreboard.draw()
 
-    def draw(self)->None:
-        return f"Window (Titulo={self._title}"
+    def update_score(self, points:int)->None:
+        self._scoreboard._points = points
+
+    def __str__(self)->str:
+        return f"Window(Title: {self._title}, Width:{self._width}, Heigth:{self._height}, Scoreboard:{self._scoreboard})"
 
 """ %%%%%%%     CÓDIGO A NIVEL DE MÓDULO    %%%%%%%%%%%%%%%%%%%%% """
 if __name__ == "__main__":
@@ -62,13 +67,14 @@ if __name__ == "__main__":
     print()
     print("Método para actualizar el scoreboard:")
     buscaminas.update_score(1)
+    buscaminas.draw_scoreboard()
 
 
     # Se crean objetos de ambas clases y se prueban sus métodos.
     print()
     print("  -- Se crea otro objeto de la clase Window, pero ahora con un objeto de la clase Scoreboard.")
 
-    marcador_solitario = Scoreboard(10,(40, 40, 40), "Arial", 40)
+    marcador_solitario = ScoreBoard(10,(40, 40, 40), "Arial", 40)
     solitario = Window("Solitario", 1_000, 1_000, marcador_solitario)
 
     print("Se imprimen los objetos:")
@@ -81,6 +87,7 @@ if __name__ == "__main__":
     print()
     print("Método para actualizar el scoreboard:")
     solitario.update_score(11)
+    solitario.draw_scoreboard()
 
 
     # Se modifican los atributos mediante los métodos de acceso.
