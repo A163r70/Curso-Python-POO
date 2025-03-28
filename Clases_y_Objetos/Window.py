@@ -1,8 +1,12 @@
 """
 Nombre: Jesús Alberto Ramírez Salinas
-Fecha: 20 de marzo de 2025
-Descripción:
+Fecha: 26 de marzo de 2025
+Descripción: Programa que nos permite:
+- Almacenar y gestionar la puntuación actual,
+- Actualizar la posición,
+- Dibujarse en pantalla con un formato específico.
 """
+#Importamos la clase ScoreBoard.
 from Clases_y_Objetos.ScoreBoard import ScoreBoard
 
 
@@ -13,6 +17,7 @@ class Window:
         self._height = height
         self._scoreboard = scoreboard
 
+    #Creamos el getter y el setter para cada atributo.
     @property
     def title(self)->str:
         return self._title
@@ -42,9 +47,18 @@ class Window:
         self._scoreboard = scoreboard
 
     def draw_scoreboard(self)->None:
+        """
+        Función que imprime el Score.
+        :return:
+        """
         self._scoreboard.draw()
 
     def update_score(self, points:int)->None:
+        """
+        Función que actualiza el Score.
+        :param points: El nuevo puntaje.
+        :return:
+        """
         self._scoreboard._points = points
 
     def __str__(self)->str:

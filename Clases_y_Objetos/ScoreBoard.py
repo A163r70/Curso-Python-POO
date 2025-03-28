@@ -11,11 +11,10 @@ class ScoreBoard:
         self._font = font
         self._size = size
 
-    #Point
+    #Creamos el Getter y el Setter para cada atributo.
     @property
     def points(self)->int:
         return self._points
-    #Point
     @points.setter
     def points(self,puntos:int)->None:
         self._points = puntos
@@ -42,6 +41,10 @@ class ScoreBoard:
         self._size = tamano
 
     def draw(self)->None:
+        """
+        Fucnión que imprime el Score.
+        :return:
+        """
         print(f"Score = {self.points}")
 
     def __str__(self):
