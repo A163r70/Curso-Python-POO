@@ -6,7 +6,12 @@ Write a function which calculates the average of the numbers in a given array.
 
 Note: Empty arrays should return 0.
 """
-def find_average(numbers):
+def find_average(numbers)->int:
+    """
+    Función que calcula y devuelve el promedio de una lista de números.
+    :param numbers: Lista de números.
+    :return: El promedio.
+    """
     if [] == numbers:
         return 0
     else:

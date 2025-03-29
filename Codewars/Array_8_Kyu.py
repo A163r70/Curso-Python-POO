@@ -6,9 +6,13 @@ You will be given an array a and a value x. All you need to do is check whether 
 a can contain numbers or strings. x can be either.
 Return true if the array contains the value, false if not.
 """
-
-
 def check(seq, elem)->bool:
+    """
+    Función que devuelve verdadero si un número o str se encunetra en una cadena, o falso en caso contrario.
+    :param seq: Lista de números o cadenas.
+    :param elem: Elemento a buscar en la lista.
+    :return: Verdadero o Falso.
+    """
     respuesta = True
     for x in seq:
         if x == elem:

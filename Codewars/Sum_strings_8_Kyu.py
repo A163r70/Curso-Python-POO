@@ -13,6 +13,12 @@ Example: (Input1, Input2 -->Output)
 """
 
 def sum_str(a, b):
+    """
+    Función que calcula la suma de dos números en forma str.
+    :param a: Primer número.
+    :param b: Segundo número.
+    :return: Resultado de la operación.
+    """
     if a == "" and b == "":
         return "0"
     elif a == "" and b != "":

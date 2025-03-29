@@ -8,8 +8,13 @@ and returns a string of s repeated exactly n times.
 6, "I"     -> "IIIIII"
 5, "Hello" -> "HelloHelloHelloHelloHello"
 """
-
-def repeat_str(repeat, string):
+def repeat_str(repeat, string)->str:
+    """
+    Función que regresa una cadena con las veces que el usuario quiere que se repita una letra o cadena.
+    :param repeat: Número de veces que se va a repetir.
+    :param string: Cadena que se va a repetir.
+    :return: Cadena repetida.
+    """
     if repeat == 0 or string == "":
         return ""
     else:

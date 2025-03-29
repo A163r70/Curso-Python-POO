@@ -13,10 +13,9 @@ time = 6.7---> litres = 3
 time = 11.8--> litres = 5
 """
 
-
 def litres(time:float)->int:
     """
-    Función que calcula los litrso de agua a aprtir del tiempo recorrido.
+    Función que calcula los litros de agua a aprtir del tiempo recorrido.
     :param time: Tiempo que ha corrido Nathan.
     :return: Los litros de agua que debe tomar.
     """

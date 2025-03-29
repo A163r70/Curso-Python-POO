@@ -7,7 +7,6 @@ Descripción:
 - Young adults drink beer.
 - Adults drink whisky.
 Make a function that receive age, and return what they drink.
-
 Rules:
 
 - Children under 14 old.
@@ -15,7 +14,12 @@ Rules:
 - Young under 21 old.
 - Adults have 21 or more.
 """
-def people_with_age_drink(age):
+def people_with_age_drink(age)->str:
+    """
+    Función que calcula que bebida tomará dependiendo de la edad.
+    :param age: La edad de la persona.
+    :return: La bebida que puede tomar.
+    """
     if age < 14:
         return "Drink toddy"
     elif age < 18:

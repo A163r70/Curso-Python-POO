@@ -6,7 +6,13 @@ Define a method named countCharOccurrences or count_char_occurrences that accept
 and returns the number of times the char occurs in the string as an int.
 """
 
-def count_char_occurrences(strng, char):
+def count_char_occurrences(strng, char)->int:
+    """
+    Función que cuneta el número de veces que aparece una letra en una cadena.
+    :param strng: Cadena de letras.
+    :param char: Letra a buscar en la cadena.
+    :return: Número de veces que aparece la leta en la cadena.
+    """
     cont = 0
     for i in strng:
         if i == char:

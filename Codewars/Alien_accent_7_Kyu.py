@@ -14,6 +14,11 @@ They tend to speak the letter a like o and o like a u.
 "codewars" ---> "cudewors"
 """
 def convert(st):
+    """
+    Función que traduce una palabra normal a lenguaje allien, cambiando la 'a' por la 'o' y la 'o' por la 'u'.
+    :param st: Cadena a traducir.
+    :return: Cadena traducida.
+    """
     nl = ""
     for letra in st:
         if letra == 'a':

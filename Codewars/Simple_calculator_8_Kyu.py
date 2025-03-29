@@ -12,7 +12,14 @@ The third argument should represent a sign indicating the operation to perform o
 if the variables are not numbers or the sign does not belong to the list above a message "unknown value"
 must be returned.
 """
-def calculator(x, y, op):
+def calculator(x, y, op)->float | str:
+    """
+    Función que realiza una operación matemática con dos números, dependiendo de la operación que se ingrese.
+    :param x: Primer número.
+    :param y: Segundo número.
+    :param op: Operación que se realizará.
+    :return: El resultado de la operación o un mensaje de error.
+    """
     x = cadena_a_flotante(str(x))
     y = cadena_a_flotante(str(y))
     while x is None or y is None:
@@ -32,6 +39,11 @@ def calculator(x, y, op):
 
 
 def cadena_a_flotante(cadena: str) -> float | None:
+    """
+    Función que convierte una cadena a un número flotante.
+    :param cadena: Cadena a convertir.
+    :return: El número flotante o nada.
+    """
     if cadena.count(".") > 1 or cadena.count("-") > 1 or (cadena.startswith("-") and "-" in cadena[1:]):
         return None
 

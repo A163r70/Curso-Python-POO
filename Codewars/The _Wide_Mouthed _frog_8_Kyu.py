@@ -14,6 +14,11 @@ which corresponds to the animal encountered by the frog.
 If this one is an alligator (case-insensitive) return small otherwise return wide.
 """
 def mouth_size(animal):
+    """
+    Función que devuelve 'wide' siempre que la palabra ingresada sea diferente de 'alligator'.
+    :param animal: Nombre del animal.
+    :return:
+    """
     if animal.lower() != "alligator":
         return "wide"
     else:
