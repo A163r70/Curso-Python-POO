@@ -26,10 +26,15 @@ class Jugador:
     def goles(self, goles):
         self._goles = goles
 
-    def anotar_goles(self, no_goles:int):
-        pass
+    def anotar_goles(self, no_goles:int)->None:
+        """
+        Métod0 para incrementar la cantidad de goles.
+        :param no_goles:
+        :return:
+        """
+        self.goles += no_goles
 
-    def __str__(self):
+    def __str__(self):# Métod0 para mostrar la información del jugador.
         return f"Jugador( Nombre = {self.nombre}, Número = {self.numero}, Goles = {self.goles})"
 
 if __name__ == '__main__':
