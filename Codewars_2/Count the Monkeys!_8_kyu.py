@@ -10,6 +10,11 @@ up to and including that number, but excluding zero.
 """
 
 def monkey_count(n):
+    """
+    Función que rellena una matriz del 1 hasta el número n dado.
+    :param n: Número final.
+    :return: Lista rellena de números.
+    """
     monkeys = []
     for i in range(1, n+1):
         monkeys.append(i)

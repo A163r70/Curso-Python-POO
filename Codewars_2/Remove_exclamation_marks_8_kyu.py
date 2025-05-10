@@ -6,6 +6,11 @@ Write function RemoveExclamationMarks which removes all exclamation marks from a
 """
 
 def remove_exclamation_marks(s):
+    """
+    Función que remueve los signos de exclamación de una cadena.
+    :param s: Cadena a la que se le eliminarán los signos de exclamación.
+    :return: Cadena sin signos de exclamación.
+    """
     list = ""
     for sign in s:
         if sign != '!':

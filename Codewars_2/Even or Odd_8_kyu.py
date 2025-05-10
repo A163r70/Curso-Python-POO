@@ -5,7 +5,12 @@ Descripción:
 Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
 """
 
-def even_or_odd(number):
+def even_or_odd(number)->str:
+    """
+    Función que calcula si un número es par o no.
+    :param number: Número a conocer si es par o no.
+    :return: Even si es par, Odd si no lo es.
+    """
     if number % 2 == 0:
         return "Even"
     else:

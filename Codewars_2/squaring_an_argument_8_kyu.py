@@ -5,7 +5,12 @@ Descripción:
 Now you have to write a function that takes an argument and returns the square of it.
 """
 
-def square(n):
+def square(n)->int:
+    """
+    Función que calcula el cuadrado de un número dado.
+    :param n: Número al que se le va a calcular el cuadrado.
+    :return: El cuadrado del número n.
+    """
     return n**2
 
 if __name__ == '__main__':

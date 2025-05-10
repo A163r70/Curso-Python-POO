@@ -8,6 +8,11 @@ The order of the sequence has to stay the same.
 """
 
 def distinct(seq):
+    """
+    Función que remueve números repetidos de una lista, manteniendo el orden que tiene.
+    :param seq: Lista de números.
+    :return: Lista sin números repetidos.
+    """
     new_seq = []
     for i in seq:
         if i not in new_seq:

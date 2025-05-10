@@ -7,7 +7,12 @@ The numbers can be negative or non-integer. If the array does not contain any nu
 then you should return 0.
 """
 
-def sum_array(a):
+def sum_array(a)->int:
+    """
+    Función que suma los números que hay en una lista.
+    :param a: Lista de números.
+    :return: Total de la suma.
+    """
     if len(a) == 0:
         return 0
     else:

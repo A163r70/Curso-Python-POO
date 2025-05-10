@@ -7,6 +7,10 @@ start removing with the next element.
 """
 
 def remove_every_other(my_list):
+    """
+    Función que remueve los uno de cada dos elementos de una lista.
+    :param my_list: Lista de números o caracteres.
+    """
     resultado = []
     for indice in range(len(my_list)):
         if indice % 2 == 0:

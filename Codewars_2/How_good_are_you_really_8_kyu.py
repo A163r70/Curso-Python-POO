@@ -11,7 +11,14 @@ You receive an array with your peers' test scores. Now calculate the average and
 Return true if you're better, else false!
 """
 
-def better_than_average(class_points, your_points):
+def better_than_average(class_points, your_points)->bool:
+    """
+    Función que calcula si el estudiante es mejor que el promedio de su clase, calculando la media y comparando
+    el resultado con su resultado.
+    :param class_points: Lista con los puntos de la clase.
+    :param your_points: Puntos del estudiante.
+    :return: True si es mejor que el promedio de la clase, False si no.
+    """
     media = sum(class_points)/len(class_points)
     if media < your_points:
         return True

@@ -13,7 +13,13 @@ You should floor all your answers so that an integer is given instead of a float
 Return your answer in the form "[min]-[max]"
 """
 
-def dating_range(age):
+def dating_range(age)->str:
+    """
+    Función que calcula el rango de edad mínimo y máximo de una persona, calculando con una fórmula si son menores d
+    14 años y con otra si son mayores de 14.
+    :param age: Edad de la persona.
+    :return: Rango mínimo  y máximo.
+    """
     if age <= 14:
         min = int(age - (0.10 * age))
         max = int(age + (0.10 * age))
