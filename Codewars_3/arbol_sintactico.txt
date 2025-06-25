@@ -1,0 +1,10 @@
+Statement
+  Assignment
+    IDENTIFIER(z)
+    ASSIGN(=)
+    BinaryOperation [+]
+      NUMBER(4)
+      BinaryOperation [*]
+        NUMBER(3)
+        NUMBER(2)
+  SEMICOLON(;)
